@@ -1,0 +1,199 @@
+
+
+/* North Star Bakery - Main Stylesheet */
+
+:root {
+  --brown: #684638;
+  --cream: #faf5ed;
+  --tan: #c19d84;
+  --dark: #30251f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--dark);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--brown);
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+header img {
+  max-width: 160px;
+  height: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+h1, h2 {
+  font-family: Georgia, serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 12px 0;
+}
+
+h2 {
+  color: var(--brown);
+  margin-top: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a:focus,
+nav a[aria-current="page"] {
+  background-color: var(--tan);
+  color: var(--dark);
+}
+
+main {
+  width: 92%;
+  max-width: 1100px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+section {
+  background: white;
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid var(--tan);
+}
+
+section img,
+picture img,
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figure {
+  margin: 15px 0;
+}
+
+figcaption {
+  font-style: italic;
+  margin-top: 8px;
+}
+
+a {
+  color: var(--brown);
+}
+
+audio {
+  width: 100%;
+  max-width: 450px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+fieldset {
+  border: 1px solid var(--tan);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--brown);
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--tan);
+  border-radius: 5px;
+  font: inherit;
+}
+
+button {
+  background: var(--brown);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background: var(--dark);
+}
+
+footer {
+  background: var(--brown);
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+footer a {
+  color: white;
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  main {
+    gap: 30px;
+  }
+
+  section {
+    padding: 35px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
