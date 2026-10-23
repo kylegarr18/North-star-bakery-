@@ -4,37 +4,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | North Star Bakery</title>
+  <title>Contact and Pre-orders | North Star Bakery</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
-    <img src="bakery-logo_c.png" alt="North Star Bakery bread logo" width="180">
+    <img src="bakery-logo_c.png" alt="North Star Bakery logo">
     <h1>North Star Bakery</h1>
+
     <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="about.html">About Our Bakery</a></li>
-        <li><a href="contact.html" aria-current="page">Contact and Pre-orders</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About Our Bakery</a>
+      <a href="contact.html" aria-current="page">Contact and Pre-orders</a>
     </nav>
   </header>
 
   <main>
     <section>
       <h2>Contact and Pre-order Requests</h2>
-      <p>Have a question or want to request a pickup? Fill out this form. This demonstration form does not send information to the bakery.</p>
+      <p>
+        Have a question or want to request a pickup?
+        Fill out this form. This demonstration form
+        does not send information to the bakery.
+      </p>
 
-      <form action="#" method="get">
+      <form id="contact-form" action="#" method="get" novalidate>
+
         <fieldset>
           <legend>Your Contact Information</legend>
 
           <label for="fullname">Full name (required)</label>
-          <input type="text" id="fullname" name="fullname" required minlength="2" autocomplete="name">
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            required
+            minlength="2"
+            autocomplete="name"
+          >
+          <span id="fullname-error" class="error-message" role="alert"></span>
 
           <label for="email">Email address (required)</label>
-          <input type="email" id="email" name="email" required autocomplete="email">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+          >
+          <span id="email-error" class="error-message" role="alert"></span>
         </fieldset>
 
         <fieldset>
@@ -47,29 +67,49 @@
             <option value="pastries">Pastry pre-order</option>
             <option value="question">General question</option>
           </select>
+          <span id="request-error" class="error-message" role="alert"></span>
 
           <label for="pickup">Preferred pickup date</label>
           <input type="date" id="pickup" name="pickup">
 
           <label for="details">Item details (required)</label>
-          <textarea id="details" name="details" rows="5" required minlength="10"></textarea>
+          <textarea
+            id="details"
+            name="details"
+            rows="5"
+            required
+            minlength="10"
+          ></textarea>
+          <span id="details-error" class="error-message" role="alert"></span>
 
-          <label for="allergies">Allergy notes (if applicable)</label>
-          <textarea id="allergies" name="allergies" rows="4"></textarea>
+          <label for="allergies">Allergies or special requests</label>
+          <textarea
+            id="allergies"
+            name="allergies"
+            rows="4"
+          ></textarea>
         </fieldset>
 
         <button type="submit">Review Request</button>
+        <p id="form-success" role="status" aria-live="polite"></p>
       </form>
     </section>
 
     <section>
       <h2>Location Information</h2>
-      <p>We serve our local neighborhood. Contact the bakery to confirm current address and pickup details.</p>
+      <p>
+        We serve our local neighborhood.
+        Contact the bakery to confirm our
+        current location and pickup details.
+      </p>
     </section>
 
     <section>
       <h2>Hours of Operation</h2>
-      <p>Please contact us for current opening hours and holiday schedules.</p>
+      <p>
+        Please contact us for current opening
+        hours and holiday schedules.
+      </p>
     </section>
   </main>
 
@@ -77,5 +117,7 @@
     <p>North Star Bakery - Freshly baked with care.</p>
     <p><a href="index.html">Return to Home</a></p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
